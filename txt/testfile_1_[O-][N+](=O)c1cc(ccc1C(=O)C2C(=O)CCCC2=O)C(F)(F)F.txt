@@ -1,0 +1,5 @@
+1
+http://rdf.ebi.ac.uk/resource/chembl/assay/CHEMBL615567,http://rdf.ebi.ac.uk/resource/chembl/assay/CHEMBL1697778,http://rdf.ebi.ac.uk/resource/chembl/assay/CHEMBL1697780,http://rdf.ebi.ac.uk/resource/chembl/assay/CHEMBL3215001,http://rdf.ebi.ac.uk/resource/chembl/assay/CHEMBL3214813,http://rdf.ebi.ac.uk/resource/chembl/assay/CHEMBL1697779,http://rdf.ebi.ac.uk/resource/chembl/assay/CHEMBL3214842,http://rdf.ebi.ac.uk/resource/chembl/assay/CHEMBL3214945
+https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql
+https://www.ebi.ac.uk/rdf/services/chembl/sparql=Chembl/EMBL-EBI
+no

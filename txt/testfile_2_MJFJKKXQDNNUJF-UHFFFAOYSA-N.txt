@@ -1,0 +1,5 @@
+2
+http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#TargetTest3,http://bio2rdf.org/drugbank:BE0000045,http://bio2rdf.org/drugbank:BE0000092,http://bio2rdf.org/drugbank:BE0000560,http://bio2rdf.org/drugbank:BE0000247,http://bio2rdf.org/drugbank:BE0000405,http://rdf.ebi.ac.uk/resource/chembl/target/CHEMBL5763,http://rdf.ebi.ac.uk/resource/chembl/target/CHEMBL612545,http://rdf.ebi.ac.uk/resource/chembl/target/CHEMBL220,http://rdf.ebi.ac.uk/resource/chembl/target/CHEMBL4768
+http://cpctas-lcmb.pmf.kg.ac.rs:3030/PIBAS/query,http://drugbank.bio2rdf.org/sparql,http://drugbank.bio2rdf.org/sparql,http://drugbank.bio2rdf.org/sparql,http://drugbank.bio2rdf.org/sparql,http://drugbank.bio2rdf.org/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql
+http://cpctas-lcmb.pmf.kg.ac.rs:3030/PIBAS/query=PIBAS/CPCTAS,http://drugbank.bio2rdf.org/sparql=Drugbank/Bio2RDF,https://www.ebi.ac.uk/rdf/services/chembl/sparql=Chembl/EMBL-EBI
+no

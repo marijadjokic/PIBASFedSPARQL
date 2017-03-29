@@ -1,0 +1,770 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY compound "http://chem2bio2rdf.org/pubchem/resource/" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Kegg "http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Kegg/" >
+    <!ENTITY Chembl "http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Chembl/" >
+    <!ENTITY Drugbank "http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Drugbank/" >
+    <!ENTITY BindingDB "http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BindingDB/" >
+]>
+
+
+<rdf:RDF xmlns="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#"
+     xml:base="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS"
+     xmlns:Drugbank="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Drugbank/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:BindingDB="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BindingDB/"
+     xmlns:Chembl="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Chembl/"
+     xmlns:compound="http://chem2bio2rdf.org/pubchem/resource/"
+     xmlns:Kegg="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Kegg/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#connectedWith -->
+
+    <owl:ObjectProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#connectedWith"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#group -->
+
+    <owl:ObjectProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#group"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasSubQueryPattern -->
+
+    <owl:ObjectProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasSubQueryPattern"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasSubTopic -->
+
+    <owl:ObjectProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasSubTopic"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasTemplate -->
+
+    <owl:ObjectProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasTemplate"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BindingdbpatternQuery -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BindingdbpatternQuery"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemblpatternQuery -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemblpatternQuery"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#DrugbankBio2RDFgetPredicate -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#DrugbankBio2RDFgetPredicate"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#DrugbankpatternQuery -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#DrugbankpatternQuery"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#PIBASpatternQuery -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#PIBASpatternQuery">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#additional_properties -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#additional_properties"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#bindingdbchem2bio2rdfTargetgetPredicate -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#bindingdbchem2bio2rdfTargetgetPredicate"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#chemblembl-ebiTargetgetPredicate -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#chemblembl-ebiTargetgetPredicate"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#comment -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#comment">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#electProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#electProperties"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#endpoint -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#endpoint">
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#fromDataSource -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#fromDataSource">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasInitialQuery -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasInitialQuery"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasInput -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasInput"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasName"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasQuery -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasQuery"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasTopic -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasTopic">
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#id -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#id">
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#link -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#link">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#patternSubQuery -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#patternSubQuery"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#pibascpctasTargetgetPredicate -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#pibascpctasTargetgetPredicate"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#prefix -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#prefix">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#selectValue -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#selectValue">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#topicName -->
+
+    <owl:DatatypeProperty rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#topicName">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BindingDBChem2Bio2RDF -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BindingDBChem2Bio2RDF">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Chem2Bio2RDF"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Bio2RDF -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Bio2RDF"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Biology -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Biology">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Topics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BiologyGroup -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BiologyGroup">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Templates"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BiologyTarget -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BiologyTarget">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#SubTopic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#CPCTAS -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#CPCTAS"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Chem2Bio2RDF -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Chem2Bio2RDF"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Chembl -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Chembl">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#EBI-PLATFORM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemblPattern1 -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemblPattern1">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#SubQueryPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Chemogenomic -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Chemogenomic">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Topics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemogenomicAssay -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemogenomicAssay">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#SubTopic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemogenomicGroup -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemogenomicGroup">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Templates"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#DrugbankBio2RDF -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#DrugbankBio2RDF">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Bio2RDF"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#DrugbankChem2Bio2RDF -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#DrugbankChem2Bio2RDF">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Chem2Bio2RDF"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#EBI-PLATFORM -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#EBI-PLATFORM"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#PIBAS -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#PIBAS">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#CPCTAS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#PIBASPattern1 -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#PIBASPattern1">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#SubQueryPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Research -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Research">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Topics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ResearchAuthors -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ResearchAuthors">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#SubTopic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ResearchGroup -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ResearchGroup">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Templates"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ReserachPapers -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ReserachPapers">
+        <rdfs:subClassOf rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#SubTopic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#SubQueryPattern -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#SubQueryPattern"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#SubTopic -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#SubTopic"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Templates -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Templates"/>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Topics -->
+
+    <owl:Class rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Topics"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BindingDB/Chem2Bio2RDFInstance -->
+
+    <owl:NamedIndividual rdf:about="&BindingDB;Chem2Bio2RDFInstance">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BindingDBChem2Bio2RDF"/>
+        <hasName>Bindingdb</hasName>
+        <link>http://www.bindingdb.org/bind/doFirstTimeUser.jsp;jsessionid=E287BE89958B2BB2DA73D7616185FD58</link>
+        <fromDataSource>Chem2Bio2RDF</fromDataSource>
+        <comment>BindingDB is a publicly accessible database currently containing ∼20 000 experimentally determined binding affinities of protein–ligand complexes, for 110 protein targets including isoforms and mutational variants, and ∼11 000 small molecule ligands</comment>
+        <endpoint>http://cheminfov.informatics.indiana.edu:8080/bindingdb/sparql</endpoint>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Biology -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Biology">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Biology"/>
+        <id rdf:datatype="&xsd;int">1</id>
+        <hasName>Biology</hasName>
+        <hasSubTopic rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BiologyTarget"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BiologyTarget -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BiologyTarget">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BiologyTarget"/>
+        <id rdf:datatype="&xsd;int">1</id>
+        <hasName>Targets</hasName>
+        <hasTemplate rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Chembl/EMBL-EBIInstance -->
+
+    <owl:NamedIndividual rdf:about="&Chembl;EMBL-EBIInstance">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Chembl"/>
+        <hasTopic rdf:datatype="&xsd;int">1</hasTopic>
+        <topicName rdf:datatype="&xsd;string">Assay</topicName>
+        <fromDataSource rdf:datatype="&xsd;string">EMBL-EBI</fromDataSource>
+        <comment rdf:datatype="&xsd;string">The ChEMBL database contains compound bioactivity data against drug targets. Bioactivity is reported in Ki, Kd, IC50, and EC50.</comment>
+        <prefix rdf:datatype="&xsd;string">chembl:&lt;http://rdf.ebi.ac.uk/terms/chembl#&gt;</prefix>
+        <link rdf:datatype="&xsd;string">https://www.ebi.ac.uk/chembl/</link>
+        <endpoint rdf:datatype="&xsd;anyURI">https://www.ebi.ac.uk/rdf/services/chembl/sparql</endpoint>
+        <hasName>Chembl</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemblPattern1 -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemblPattern1">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemblPattern1"/>
+        <patternSubQuery>SERVICE&lt;https://www.ebi.ac.uk/rdf/services/chembl/sparql&gt;{OPTIONAL{?Assay ?p &quot;HCT-116&quot;.%s FILTER regex(?Assay,&apos;^http://rdf.ebi.ac.uk/resource/chembl/assay/&apos;,&apos;i&apos;).}}</patternSubQuery>
+        <hasName>ChemblPattern1</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemistryCellLine -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemistryCellLine">
+        <id rdf:datatype="&xsd;int">3</id>
+        <hasName>Cell Line</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Chemogenomic -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Chemogenomic">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Chemogenomic"/>
+        <id rdf:datatype="&xsd;int">2</id>
+        <hasName>Chemogenomic</hasName>
+        <hasSubTopic rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemogenomicAssay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemogenomicAssay -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemogenomicAssay">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemogenomicAssay"/>
+        <id rdf:datatype="&xsd;int">2</id>
+        <hasName>Assays</hasName>
+        <hasTemplate rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Drugbank/Bio2RDFInstance -->
+
+    <owl:NamedIndividual rdf:about="&Drugbank;Bio2RDFInstance">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#DrugbankBio2RDF"/>
+        <fromDataSource>Bio2RDF</fromDataSource>
+        <link>http://www.drugbank.ca/</link>
+        <hasName>Drugbank</hasName>
+        <comment>The DrugBank database is a unique bioinformatics and cheminformatics resource that combines detailed drug (i.e. chemical, pharmacological and pharmaceutical) data with comprehensive drug target (i.e. sequence, structure, and pathway) information. The database contains 8227 drug entries including 2003 FDA-approved small molecule drugs, 221 FDA-approved biotech (protein/peptide) drugs, 93 nutraceuticals and over 6000 experimental drugs. Additionally, 4344 non-redundant protein (i.e. drug target/enzyme/transporter/carrier) sequences are linked to these drug entries. Each DrugCard entry contains more than 200 data fields with half of the information being devoted to drug/chemical data and the other half devoted to drug target or protein data.</comment>
+        <endpoint>http://drugbank.bio2rdf.org/sparql</endpoint>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Drugbank/Chem2Bio2RDFInstance -->
+
+    <owl:NamedIndividual rdf:about="&Drugbank;Chem2Bio2RDFInstance">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#DrugbankChem2Bio2RDF"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#PIBAS/CPCTASInstance -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#PIBAS/CPCTASInstance">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#PIBAS"/>
+        <fromDataSource rdf:datatype="&xsd;string">CPCTAS</fromDataSource>
+        <comment rdf:datatype="&xsd;string">The subject of the analysis that are carried out at the Laboratory include monitoring of in vitro effects of active substances in the cell lines of different origin (primarily cancer cell lines) and primary cells isolated from different tissues.Tests include cytotoxic active substances in human cancer cell lines, while monitoring the type of cell death, the mechanisms of apoptosis, migration and angiogenesis and prooxidant-antioxidant mechanisms which underlie the regulation of these processes.</comment>
+        <link rdf:datatype="&xsd;string">http://cpctas-lcmb.pmf.kg.ac.rs/lcmb/index.php?jezik=english</link>
+        <endpoint rdf:datatype="&xsd;anyURI">http://cpctas-lcmb.pmf.kg.ac.rs:2020/sparql</endpoint>
+        <hasName>PIBAS</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#PIBASPattern1 -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#PIBASPattern1">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#PIBASPattern1"/>
+        <hasName>PIBASPattern1</hasName>
+        <patternSubQuery>{OPTIONAL{?Assay pibas:modelSystem ?modelSystem.?modelSystem pibas:name &apos;HCT-116&apos;.?instance pibas:hasName ?Dataset.?instance pibas:fromDataSource ?Initiative.%s FILTER(?Dataset=&apos;PIBAS&apos;).}</patternSubQuery>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Research -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Research">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Research"/>
+        <id rdf:datatype="&xsd;int">3</id>
+        <hasName>Research</hasName>
+        <hasSubTopic rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ResearchAuthors"/>
+        <hasSubTopic rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ReserachPapers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ResearchAuthors -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ResearchAuthors">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ResearchAuthors"/>
+        <id rdf:datatype="&xsd;int">4</id>
+        <hasName>Authors</hasName>
+        <hasTemplate rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ReserachPapers -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ReserachPapers">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ReserachPapers"/>
+        <id rdf:datatype="&xsd;int">5</id>
+        <hasName>Papers</hasName>
+        <hasTemplate rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template1 -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template1">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemogenomicGroup"/>
+        <id rdf:datatype="&xsd;int">1</id>
+        <chemblembl-ebiTargetgetPredicate>PREFIX chembl:&lt;http://rdf.ebi.ac.uk/terms/chembl#&gt; PREFIX xsd:&lt;http://www.w3.org/2001/XMLSchema#&gt; PREFIX rdfs:&lt;http://www.w3.org/2000/01/rdf-schema#&gt; PREFIX rdf:&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; PREFIX owl:&lt;http://www.w3.org/2002/07/owl#&gt; SELECT DISTINCT  ?predicate (str(?label) AS ?description) WHERE{ SERVICE &lt;https://www.ebi.ac.uk/rdf/services/chembl/sparql&gt; { OPTIONAL { ?class_type rdf:type chembl:Assay. ?class_type ?predicate ?value. ?predicate rdfs:label ?label.}}}</chemblembl-ebiTargetgetPredicate>
+        <hasName>Find assays for the cell line</hasName>
+        <selectValue>Assay</selectValue>
+        <ChemblpatternQuery>PREFIX  cco: &lt;http://rdf.ebi.ac.uk/terms/chembl#&gt; PREFIX  pubchem:&lt;http://chem2bio2rdf.org/pubchem/resource/&gt; PREFIX  chembl: &lt;http://rdf.farmbio.uu.se/chembl/onto/#&gt; PREFIX pibas:&lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#&gt; PREFIX dc: &lt;http://purl.org/dc/elements/1.1/&gt; PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt; SELECT DISTINCT  ?Assay ?Dataset %s WHERE{SERVICE &lt;https://www.ebi.ac.uk/rdf/services/chembl/sparql&gt;{ OPTIONAL{?Assay ?p  &quot;%s&quot;. FILTER regex(?Assay ,&apos;^http://rdf.ebi.ac.uk/resource/chembl/assay/&apos;,&apos;i&apos;).?Assay %s. &lt;http://rdf.ebi.ac.uk/dataset/chembl/description&gt; ?s ?o. ?o dcterms:title ?Dataset.}}}</ChemblpatternQuery>
+        <PIBASpatternQuery>PREFIX  cco: &lt;http://rdf.ebi.ac.uk/terms/chembl#&gt; PREFIX pubchem:&lt;http://chem2bio2rdf.org/pubchem/resource/&gt; PREFIX  chembl: &lt;http://rdf.farmbio.uu.se/chembl/onto/#&gt; PREFIX pibas:&lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#&gt; SELECT DISTINCT  ?Assay ?Dataset %s FROM &lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSources.owl&gt; 
+FROM &lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/expMethod.owl&gt; WHERE{OPTIONAL{?Assay pibas:modelSystem ?modelSystem.?modelSystem pibas:name &quot;%s&quot;. ?Assay %s. ?instance pibas:hasName ?Dataset.  ?instance pibas:fromDataSource ?Initiative.  FILTER(?Dataset=&apos;PIBAS&apos;).}}</PIBASpatternQuery>
+        <hasQuery>PREFIX pibas:&lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#&gt; SELECT DISTINCT ?name FROM &lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/ModelSystem.owl&gt; WHERE{?s pibas:name ?name.}order by ?name</hasQuery>
+        <pibascpctasTargetgetPredicate>PREFIX pibas:&lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#&gt; PREFIX xsd:&lt;http://www.w3.org/2001/XMLSchema#&gt; PREFIX rdfs:&lt;http://www.w3.org/2000/01/rdf-schema#&gt; PREFIX rdf:&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; PREFIX owl:&lt;http://www.w3.org/2002/07/owl#&gt; SELECT DISTINCT  ?predicate (str(?predicate) AS ?description)  FROM &lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/expMethod.owl&gt; WHERE  { OPTIONAL { ?class_type rdf:type pibas:Experiment.  ?class_type ?predicate ?value.} }</pibascpctasTargetgetPredicate>
+        <hasInput>Cell Line</hasInput>
+        <hasInitialQuery>PREFIX  cco: &lt;http://rdf.ebi.ac.uk/terms/chembl#&gt; PREFIX  pubchem:&lt;http://chem2bio2rdf.org/pubchem/resource/&gt; PREFIX  chembl: &lt;http://rdf.farmbio.uu.se/chembl/onto/#&gt; PREFIX pibas:&lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#&gt;PREFIX dc: &lt;http://purl.org/dc/elements/1.1/&gt; PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt; SELECT DISTINCT  ?Assay ?Dataset  FROM &lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/expMethod.owl&gt; FROM &lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSources.owl&gt; WHERE{{OPTIONAL{?Assay pibas:modelSystem ?modelSystem.?modelSystem pibas:name  &quot;%s&quot;.?instance pibas:hasName ?Dataset. ?instance pibas:fromDataSource ?Initiative. FILTER(?Dataset=&apos;PIBAS&apos;).}}UNION{SERVICE &lt;https://www.ebi.ac.uk/rdf/services/chembl/sparql&gt;{OPTIONAL{?Assay ?p  &quot;%s&quot;.FILTER regex(?Assay ,&apos;^http://rdf.ebi.ac.uk/resource/chembl/assay/&apos;,&apos;i&apos;).&lt;http://rdf.ebi.ac.uk/dataset/chembl/description&gt; ?s ?o. ?o dcterms:title ?Dataset.}}}}</hasInitialQuery>
+        <connectedWith rdf:resource="&Chembl;EMBL-EBIInstance"/>
+        <connectedWith rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#PIBAS/CPCTASInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template2 -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template2">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#BiologyGroup"/>
+        <id rdf:datatype="&xsd;int">2</id>
+        <PIBASpatternQuery>PREFIX pibas:&lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#&gt; PREFIX pibas:&lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#&gt; SELECT DISTINCT ?Target ?Dataset %s WHERE{SERVICE SILENT &lt;http://cpctas-lcmb.pmf.kg.ac.rs:3030/PIBAS/query&gt;{?pibas pibas:hasInChiKey &apos;%s&apos;. ?pibas pibas:hasTarget ?Target. ?Target %s. } BIND(&apos;PIBAS/CPCTAS&apos; AS ?Dataset).}</PIBASpatternQuery>
+        <DrugbankpatternQuery>PREFIX drugbank:&lt;http://bio2rdf.org/drugbank_vocabulary:&gt;SELECT DISTINCT ?Target ?Dataset %s WHERE{SERVICE SILENT &lt;http://drugbank.bio2rdf.org/sparql&gt;{
+?s ?p &quot;InChIKey=%s&quot;^^&lt;http://www.w3.org/2001/XMLSchema#string&gt;.?drugbank ?p1 ?s. ?drugbank drugbank:target ?Target.?Target %s.}}BIND(&quot;Drugbank/Bio2RDF&quot; AS ?Dataset).}</DrugbankpatternQuery>
+        <pibascpctasTargetgetPredicate>PREFIX pibas:&lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#&gt; PREFIX rdf:&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; SELECT DISTINCT  ?predicate (str(?predicate) AS ?description) WHERE  { SERVICE SILENT &lt;http://cpctas-lcmb.pmf.kg.ac.rs:3030/PIBAS/query&gt; { ?class_type rdf:type pibas:Target.  ?class_type ?predicate ?value. } }</pibascpctasTargetgetPredicate>
+        <BindingdbpatternQuery>PREFIX bindingdb: &lt;http://chem2bio2rdf.org/bindingdb/resource/&gt;SELECT DISTINCT ?Target ?Dataset %s WHERE{SERVICE SILENT &lt;http://cheminfov.informatics.indiana.edu:8080/bindingdb/sparql&gt;{?bindingdb bindingdb:inchikey &quot;%s&quot; .?Target bindingdb:Monomerid ?bindingdb.?Target %s.} BIND(&quot;BindingDB/Chem2Bio2RDF&quot; AS ?Dataset).}</BindingdbpatternQuery>
+        <DrugbankBio2RDFgetPredicate>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; SELECT DISTINCT ?predicate (str(?label) AS ?description) WHERE {SERVICE SILENT &lt;http://drugbank.bio2rdf.org/sparql&gt;{&lt;http://bio2rdf.org/drugbank:BE0000045&gt; ?predicate  ?haspredicate. ?predicate rdfs:label label.}}</DrugbankBio2RDFgetPredicate>
+        <topicName>Target</topicName>
+        <hasName>Find targets for the drug</hasName>
+        <hasInitialQuery>PREFIX  pibas: &lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#&gt;
+PREFIX  drugbank: &lt;http://bio2rdf.org/drugbank:&gt;
+PREFIX  bindingdb: &lt;http://chem2bio2rdf.org/bindingdb/resource/&gt;
+PREFIX  cco:  &lt;http://rdf.ebi.ac.uk/terms/chembl#&gt;
+SELECT DISTINCT  ?Target ?Dataset
+WHERE
+  {   { SERVICE SILENT &lt;http://cpctas-lcmb.pmf.kg.ac.rs:3030/PIBAS/query&gt;
+         { ?pibas pibas:hasInChiKey &quot;%s&quot;.
+           ?pibas pibas:hasTarget ?Target.
+		 }
+		BIND(&quot;PIBAS/CPCTAS&quot; AS ?Dataset).
+      }
+    UNION
+      { SERVICE SILENT &lt;http://drugbank.bio2rdf.org/sparql&gt;
+          { ?s ?p &quot;InChIKey=%s&quot;^^&lt;http://www.w3.org/2001/XMLSchema#string&gt;.
+            ?drugbank ?p1 ?s.
+            ?drugbank drugbank:target ?Target.
+          }
+        BIND(&quot;Drugbank/Bio2RDF&quot; AS ?Dataset).
+      }
+    UNION
+      { SERVICE SILENT &lt;https://www.ebi.ac.uk/rdf/services/chembl/sparql/&gt;
+          { ?inchikey ?hasInchiKey &quot;%s&quot;.
+            ?chembl ?p1 ?inchikey.
+            ?activity cco:hasMolecule ?chembl.
+            ?activity cco:hasAssay ?assay.
+            ?assay cco:hasTarget ?Target.
+          }
+        BIND(&quot;Chembl/EMBL-EBI&quot; AS ?Dataset).
+      }
+    UNION
+      { SERVICE SILENT &lt;http://cheminfov.informatics.indiana.edu:8080/bindingdb/sparql&gt;
+          { ?bindingdb bindingdb:inchikey &quot;%s&quot;.
+            ?Target bindingdb:Monomerid ?bindingdb.
+          }
+        BIND(&quot;BindingDB/Chem2Bio2RDF&quot; AS ?Dataset).
+      }
+    %s  }
+  
+  
+  
+  </hasInitialQuery>
+        <chemblembl-ebiTargetgetPredicate>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; SELECT DISTINCT  ?predicate (str(?label) AS ?description) WHERE {SERVICE SILENT&lt;https://www.ebi.ac.uk/rdf/services/chembl/sparql/&gt;{&lt;http://rdf.ebi.ac.uk/resource/chembl/target/CHEMBL372&gt; ?predicate ?haspredicate.?predicate rdfs:label ?label.}}</chemblembl-ebiTargetgetPredicate>
+        <ChemblpatternQuery>PREFIX  cco: &lt;http://rdf.ebi.ac.uk/terms/chembl#&gt; PREFIX  pubchem:&lt;http://chem2bio2rdf.org/pubchem/resource/&gt; PREFIX  chembl: &lt;http://rdf.farmbio.uu.se/chembl/onto/#&gt; PREFIX pibas:&lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#&gt; PREFIX dc: &lt;http://purl.org/dc/elements/1.1/&gt; PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt; SELECT DISTINCT  ?Target ?Dataset %s WHERE{SERVICE &lt;https://www.ebi.ac.uk/rdf/services/chembl/sparql&gt;{ OPTIONAL{?inchikey ?hasInchiKey &apos;%s&apos;. ?chembl ?p1 ?inchikey. ?activity cco:hasMolecule ?chembl. ?activity cco:hasAssay ?assay .?assay cco:hasTarget ?Target.?Target %s.&lt;http://rdf.ebi.ac.uk/dataset/chembl/description&gt; ?s ?o. ?o dcterms:title ?Dataset.}}}</ChemblpatternQuery>
+        <hasInput>InChiKey</hasInput>
+        <bindingdbchem2bio2rdfTargetgetPredicate>SELECT DISTINCT  ?predicate  (str(?predicate) AS ?description) WHERE{SERVICE&lt;http://cheminfov.informatics.indiana.edu:8080/bindingdb/sparql&gt; {OPTIONAL{&lt;http://chem2bio2rdf.org/bindingdb/resource/bindingdb_interaction/55299&gt; ?predicate ?hasValue.}}}</bindingdbchem2bio2rdfTargetgetPredicate>
+        <electProperties>{&apos;PIBAS/CPCTAS&apos;:&apos;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasSynonym,http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#hasTargetName&apos;,&apos;BindingDB/Chem2Bio2RDF&apos;:&apos;http://chem2bio2rdf.org/bindingdb/resource/TARGET&apos;,&apos;Chembl/EMBL-EBI&apos;:&apos;http://www.w3.org/2000/01/rdf-schema#label&apos;,&apos;Drugbank/Bio2RDF&apos;:&apos;http://purl.org/dc/terms/title,http://www.w3.org/2000/01/rdf-schema#label&apos;}</electProperties>
+        <connectedWith rdf:resource="&BindingDB;Chem2Bio2RDFInstance"/>
+        <connectedWith rdf:resource="&Chembl;EMBL-EBIInstance"/>
+        <connectedWith rdf:resource="&Drugbank;Bio2RDFInstance"/>
+        <connectedWith rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#PIBAS/CPCTASInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template3 -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template3">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemogenomicGroup"/>
+        <id rdf:datatype="&xsd;int">3</id>
+        <electProperties>{&apos;BindingDB/Chem2Bio2RDF&apos;:&apos;http://chem2bio2rdf.org/bindingdb/resource/TARGET&apos;,&apos;Kegg/Chem2Bio2RDF&apos;:&apos;http://www.w3.org/2000/01/rdf-schema#label,http://chem2bio2rdf.org/kegg/resource/name&apos;,&apos;PDB/Chem2Bio2RDF&apos;:&apos;http://chem2bio2rdf.org/pdb/resource/name,http://www.w3.org/2000/01/rdf-schema#label&apos;,&apos;Pharmgkb/Chem2Bio2RDF&apos;:&apos;http://www.w3.org/2000/01/rdf-schema#label,http://chem2bio2rdf.org/pharmgkb/resource/Name&apos;,&apos;Kegg/Bio2RDF&apos;:&apos;http://purl.org/dc/terms/title,http://www.w3.org/2000/01/rdf-schema#label&apos;,&apos;Chembl/EMBL-EBI&apos;:&apos;http://www.w3.org/2000/01/rdf-schema#label&apos;,&apos;Drugbank/Bio2RDF&apos;:&apos;http://purl.org/dc/terms/title,http://www.w3.org/2000/01/rdf-schema#label&apos;,&apos;Chembl/EMBL-EBI&apos;:&apos;http://purl.org/dc/terms/title,http://www.w3.org/2000/01/rdf-schema#label&apos;,&apos;Chemogenomics/Chem2Bio2RDF&apos;:&apos;http://chem2bio2rdf.org/chemogenomics/resource/CID_GENE,http://www.w3.org/2000/01/rdf-schema#label&apos;,&apos;Drugbank/Chem2Bio2RDF&apos;:&apos;http://cheminfov.informatics.indiana.edu:8080/drugbank/resource/vocab/c2b2r_DrugBankTarget_Name&apos;}</electProperties>
+        <hasName>Ligands properties</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template4 -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template4">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ResearchGroup"/>
+        <id rdf:datatype="&xsd;int">4</id>
+        <hasInput>Author</hasInput>
+        <hasName>Find papers for the author</hasName>
+        <hasQuery>PREFIX foaf:&lt;http://xmlns.com/foaf/0.1/&gt; SELECT ?name FROM &lt;http://physics.kg.ac.rs/references/authors.rdf&gt; WHERE {?s foaf:name ?name.} order by ?name</hasQuery>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template5 -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template5">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ResearchGroup"/>
+        <id rdf:datatype="&xsd;int">5</id>
+        <hasQuery>PREFIX pibas:&lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#&gt; SELECT ?name FROM &lt;http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/ModelSystem.owl&gt; WHERE{?s pibas:name ?name.}order by ?name</hasQuery>
+        <hasName>Find papers with a topic for the cell line</hasName>
+        <hasInput>Cell Line</hasInput>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template6 -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template6">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemogenomicGroup"/>
+        <id rdf:datatype="&xsd;int">6</id>
+        <electProperties>{&apos;BindingDB/Chem2Bio2RDF&apos;:&apos;http://chem2bio2rdf.org/bindingdb/resource/TARGET&apos;,&apos;Kegg/Chem2Bio2RDF&apos;:&apos;http://www.w3.org/2000/01/rdf-schema#label,http://chem2bio2rdf.org/kegg/resource/name&apos;,&apos;PDB/Chem2Bio2RDF&apos;:&apos;http://chem2bio2rdf.org/pdb/resource/name,http://www.w3.org/2000/01/rdf-schema#label&apos;,&apos;Pharmgkb/Chem2Bio2RDF&apos;:&apos;http://www.w3.org/2000/01/rdf-schema#label,http://chem2bio2rdf.org/pharmgkb/resource/Name&apos;,&apos;Kegg/Bio2RDF&apos;:&apos;http://purl.org/dc/terms/title,http://www.w3.org/2000/01/rdf-schema#label&apos;,&apos;Chembl/EMBL-EBI&apos;:&apos;http://www.w3.org/2000/01/rdf-schema#label&apos;,&apos;Drugbank/Bio2RDF&apos;:&apos;http://purl.org/dc/terms/title,http://www.w3.org/2000/01/rdf-schema#label,http://bio2rdf.org/drugbank_vocabulary:gene-name,http://bio2rdf.org/drugbank_vocabulary:synonym&apos;,&apos;Chembl/EMBL-EBI&apos;:&apos;http://purl.org/dc/terms/title,http://www.w3.org/2000/01/rdf-schema#label&apos;}</electProperties>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template7 -->
+
+    <owl:NamedIndividual rdf:about="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Template7">
+        <rdf:type rdf:resource="http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#ChemogenomicGroup"/>
+        <id rdf:datatype="&xsd;int">7</id>
+        <electProperties>{&apos;Kegg/Chem2Bio2RDF&apos;:&apos;http://www.w3.org/2000/01/rdf-schema#label,http://chem2bio2rdf.org/kegg/resource/name,http://chem2bio2rdf.org/kegg/resource/cas&apos;,&apos;PDB/Chem2Bio2RDF&apos;:&apos;http://chem2bio2rdf.org/pdb/resource/name,http://www.w3.org/2000/01/rdf-schema#label,http://bio2rdf.org/kegg_vocabulary:x-cas&apos;,&apos;Drugbank/Bio2RDF&apos;:&apos;http://www.w3.org/2000/01/rdf-schema#label,http://purl.org/dc/terms/title,http://purl.org/dc/terms/description&apos;,&apos;BindingDB/Chem2Bio2RDF&apos;:&apos;http://chem2bio2rdf.org/bindingdb/resource/Name,http://www.w3.org/2000/01/rdf-schema#label&apos;}</electProperties>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

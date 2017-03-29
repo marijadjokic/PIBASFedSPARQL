@@ -1,0 +1,5 @@
+1
+http://chem2bio2rdf.org/pubchem/resource/pubchem_bioassay/1021,http://rdf.ebi.ac.uk/resource/chembl/assay/CHEMBL1794401,http://rdf.ebi.ac.uk/resource/chembl/assay/CHEMBL1614459,http://rdf.ebi.ac.uk/resource/chembl/assay/CHEMBL1738442,http://rdf.ebi.ac.uk/resource/chembl/assay/CHEMBL1794553,http://rdf.ebi.ac.uk/resource/chembl/assay/CHEMBL1794483,http://rdf.ebi.ac.uk/resource/chembl/assay/CHEMBL2114843
+http://147.91.203.161:8890/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql
+http://147.91.203.161:8890/sparql=Pubchem/Chem2Bio2RDF,https://www.ebi.ac.uk/rdf/services/chembl/sparql=Chembl/EMBL-EBI
+no

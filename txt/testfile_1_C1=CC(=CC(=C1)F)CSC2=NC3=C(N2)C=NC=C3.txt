@@ -1,0 +1,5 @@
+1
+http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#Experiment5,http://chem2bio2rdf.org/pubchem/resource/pubchem_bioassay/902,http://chem2bio2rdf.org/pubchem/resource/pubchem_bioassay/924,http://chem2bio2rdf.org/pubchem/resource/pubchem_bioassay/522
+http://cpctas-lcmb.pmf.kg.ac.rs:3030/PIBAS/query,http://147.91.203.161:8890/sparql,http://147.91.203.161:8890/sparql,http://147.91.203.161:8890/sparql
+http://cpctas-lcmb.pmf.kg.ac.rs:3030/PIBAS/query=PIBAS/CPCTAS,http://147.91.203.161:8890/sparql=Pubchem/Chem2Bio2RDF
+no

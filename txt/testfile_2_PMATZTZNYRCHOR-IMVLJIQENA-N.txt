@@ -1,0 +1,5 @@
+2
+http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#TargetTest2,http://bio2rdf.org/drugbank:BE0000379,http://bio2rdf.org/drugbank:BE0001014,http://bio2rdf.org/drugbank:BE0001399,http://bio2rdf.org/drugbank:BE0002143
+http://cpctas-lcmb.pmf.kg.ac.rs:3030/PIBAS/query,http://drugbank.bio2rdf.org/sparql,http://drugbank.bio2rdf.org/sparql,http://drugbank.bio2rdf.org/sparql,http://drugbank.bio2rdf.org/sparql
+http://cpctas-lcmb.pmf.kg.ac.rs:3030/PIBAS/query=PIBAS/CPCTAS,http://drugbank.bio2rdf.org/sparql=Drugbank/Bio2RDF
+no

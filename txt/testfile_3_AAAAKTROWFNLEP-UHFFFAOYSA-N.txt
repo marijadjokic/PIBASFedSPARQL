@@ -1,0 +1,5 @@
+3
+http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#MS07,http://rdf.ebi.ac.uk/resource/chembl/cell_line/CHEMBL3307574
+http://cpctas-lcmb.pmf.kg.ac.rs:3030/PIBAS/query,https://www.ebi.ac.uk/rdf/services/chembl/sparql
+http://cpctas-lcmb.pmf.kg.ac.rs:3030/PIBAS/query=PIBAS/CPCTAS,https://www.ebi.ac.uk/rdf/services/chembl/sparql=Chembl/EMBL-EBI
+no
