@@ -45,7 +45,7 @@ function RunAll() {
                 successmessage = 'Data was succesfully captured';
                 var myTableDiv = document.getElementById("myDynamicTable");
 
-                var table = '<table id="myTable" style="width: 1014px;word-break: break-all;" class="table-sort table-sort-search table-sort-show-search-count">';
+                var table = '<table id="myTable" style="width: 1014px;word-break: break-word;" class="table-sort table-sort-search table-sort-show-search-count">';
                 table += '<thead><tr>';
                 table += '<th id="input_elements" class="table-sort">' + data.Variable1 + '</th>';
                 table += '<th class="table-sort">' + data.Variable2 + '</th>';
@@ -67,7 +67,7 @@ function RunAll() {
                     table += '<tr><td><a href=' + data.children[x][data.Variable1] + ' target="_blank">' + data.children[x][data.Variable1] + '</a></td>';
 					}
 					else{
-					table += '<tr><td style="width: 1014px;word-break: break-all;">' + data.children[x][data.Variable1] + '</td>';
+					table += '<tr><td style="width: 1014px;word-break: break-word;">' + data.children[x][data.Variable1] + '</td>';
 					}
                     table += '<td>' + data.children[x].Dataset + '</td>';
                     if (data.children[x].Dataset in statistics_data)

@@ -70,7 +70,7 @@
       function newRow(arr) {
         var row = $('<tr></tr>');
         for (var i=0;i<arr.length;i++) {
-          var td = $('<td>'+arr[i]+'</td>').css('white-space','nowrap');
+          var td = $('<td>'+arr[i]+'</td>').css('white-space','normal');
           row.append(td);
         };
         return row;
@@ -271,7 +271,7 @@
       // Go through each table heading and apply sorting if the heading is sortable
       table.find('th').each(function () {
         var th = $(this);
-        th.css('white-space','nowrap');
+        th.css('white-space','normal');
         if ($(this).hasClass('table-sort')) {
           format(th);
           bindTh(th);
@@ -279,7 +279,7 @@
       });
 
       table.find('td').each(function () {
-        $(this).css('white-space','nowrap');
+        $(this).css('white-space','normal');
       });
 
       setUpScroll();
