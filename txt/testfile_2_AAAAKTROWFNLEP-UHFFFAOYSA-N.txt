@@ -1,5 +1,5 @@
 2
-http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#TargetTest1,http://rdf.ebi.ac.uk/resource/chembl/target/CHEMBL2208,http://rdf.ebi.ac.uk/resource/chembl/target/CHEMBL3587,http://rdf.ebi.ac.uk/resource/chembl/target/CHEMBL4040,http://rdf.ebi.ac.uk/resource/chembl/target/CHEMBL614245,http://chem2bio2rdf.org/bindingdb/resource/bindingdb_interaction/55299
-http://cpctas-lcmb.pmf.kg.ac.rs:3030/PIBAS/query,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,https://www.ebi.ac.uk/rdf/services/chembl/sparql,http://cheminfov.informatics.indiana.edu:8080/bindingdb/sparql
-http://cpctas-lcmb.pmf.kg.ac.rs:3030/PIBAS/query=PIBAS/CPCTAS,https://www.ebi.ac.uk/rdf/services/chembl/sparql=Chembl/EMBL-EBI,http://cheminfov.informatics.indiana.edu:8080/bindingdb/sparql=BindingDB/Chem2Bio2RDF
+http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#TargetTest1,http://rdf.ebi.ac.uk/resource/chembl/target/CHEMBL2208,http://rdf.ebi.ac.uk/resource/chembl/target/CHEMBL3587,http://rdf.ebi.ac.uk/resource/chembl/target/CHEMBL4040,http://rdf.ebi.ac.uk/resource/chembl/target/CHEMBL614245
+http://cpctas-lcmb.pmf.kg.ac.rs:3030/PIBAS/sparql,https://www.ebi.ac.uk/rdf/services/sparql,https://www.ebi.ac.uk/rdf/services/sparql,https://www.ebi.ac.uk/rdf/services/sparql,https://www.ebi.ac.uk/rdf/services/sparql
+http://cpctas-lcmb.pmf.kg.ac.rs:3030/PIBAS/sparql=PIBAS/CPCTAS,https://www.ebi.ac.uk/rdf/services/sparql=Chembl/EMBL-EBI
 no

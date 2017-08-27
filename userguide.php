@@ -58,8 +58,8 @@
                                     <div style="text-align: justify;">
                                         <p>PIBAS FedSPARQL, an open-source SPARQL query builder and result set visualizer for bioinformatics data, which allows end-users to easily construct and run Federated SPARQL queries across multiple datasets.</p>
                                         <br/>
-
-
+                                        
+									
                                         <p><b>Basic steps:</b><br/> 
                                             <ol LINE-HEIGHT:20px>
                                                 <li>Select topic</li>
@@ -109,7 +109,11 @@
                                                             </td></tr>
 
                                                     </table>
+												<br/>
+													
                                                 </div>
+												<p>You can watch PIBASFed SPARQL demo <a href="https://www.youtube.com/watch?v=it32Vrs84GQ&t=87s" target="_blank">here</a>.</p>
+
 
 
                                                 <!-- The Modal -->
@@ -149,7 +153,7 @@
             <!-- content ends -->
             <!-- footer begins -->
             <div id="footer">
-                Copyright  2016. Designed by <a href="http://cpctas-lcmb.pmf.kg.ac.rs" title="CPCTAS" target="_blank">CPCTAS team</a>	
+                Copyright  2017. Designed by <a href="http://cpctas-lcmb.pmf.kg.ac.rs" title="CPCTAS" target="_blank">CPCTAS team</a>	
                 <br/>
                 <a href="http://imi.pmf.kg.ac.rs/" target='_blank'>IMI</a> | <a href="http://www.pmf.kg.ac.rs/" target='_blank'>PMF</a> | <a href="http://www.kg.ac.rs/" target='_blank'>University of Kragujevac</a>
 
