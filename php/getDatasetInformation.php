@@ -1,12 +1,38 @@
 <?php
 
 $templateid = $_POST['template_id'];
-//test value
-//$templateid = "2";
+$dataset_name = $_POST['name'];
+$dataset_initiative = $_POST['initiative'];
+$dataset_link = $_POST['link'];
+$dataset_comment = $_POST['comment'];
+$dataset_endpoint = $_POST['endpoint'];
+$dataset_pattern = $_POST['pattern'];
+$public_filed = $_POST['public'];
 
 require_once("sparqlConnection.php");
 
+if(filter_var($public_filed, FILTER_VALIDATE_BOOLEAN)){
+    
+    $info= "Dataset name: ".$dataset_name.", Dataset initiative: ".$dataset_initiative.", Dataset Link: ".$dataset_link.", Dataset comment: ".$dataset_comment.", Dataset endpoint: ".$dataset_endpoint. ", Dataset pattern: ".str_replace('"', "", rtrim($dataset_pattern));
+    $insert_info_public_dataset="
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX pibas:<http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#>
+        INSERT DATA
+        { 
+            pibas:Template".$templateid." pibas:new_dataset_".$dataset_name."_".$dataset_initiative." '".$info."'.
 
+        } ";
+    
+    $db = sparql_connect($sparqlEndPointInsert);
+    $insert_result = $db->update($insert_info_public_dataset);
+    if (!$insert_result) {
+        echo "Error: " . $db->errno();
+        exit;
+    }
+}
 
 $dataset_name_and_endpoint = "  
   PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -15,7 +41,7 @@ $dataset_name_and_endpoint = "
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX pibas:<http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#>
   SELECT DISTINCT ?DatasetName ?InitiativeName ?endpoint
-  FROM <http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSources.owl>
+  #FROM <http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSources.owl>
   WHERE 
   { 
    

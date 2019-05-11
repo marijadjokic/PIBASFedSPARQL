@@ -10,7 +10,7 @@
 
         <link rel="stylesheet" type="text/css" href="css/tablesort.css">
             <link rel="stylesheet" type="text/css" href="css/pop-up-window.css">
-                <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+                <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
                     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
                         <link rel="stylesheet" type="text/css" href="styles.css" />
                         <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script> 
@@ -20,7 +20,7 @@
                          <!--                <script src="//code.jquery.com/jquery-1.12.3.js"></script>-->
 
                         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-                        <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+                        <script type="text/javascript" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
                         <script type="text/javascript" src="js/tablesort.js"></script> 
 
@@ -201,6 +201,7 @@
 
                                            
                                             <input type="hidden" id="property_array" value=""/>
+                                            <input type="hidden" id="property_filter_array" value=""/>
 
                                             <input type="hidden" id="for_new_dataset" value=""/>
                                             <input type="hidden" id="for_filter" value=""/><!--
@@ -217,7 +218,8 @@
                                             <input type="hidden" id="for_new_filter" value=""/>
 
                                             <input type="hidden" id="name_of_dataset_initiative" value=""/>
-
+                                            
+                                             <input type="hidden" id="dataset_instances" value=""/>
 
                                             <br/>
 
@@ -230,7 +232,7 @@
                                     <!-- content ends -->
                                     <!-- footer begins -->
                                     <div id="footer">
-                                        Copyright  2017. Designed by <a href="http://cpctas-lcmb.pmf.kg.ac.rs" title="CPCTAS">CPCTAS team</a>	
+                                        Copyright  2019. Designed by <a href="http://cpctas-lcmb.pmf.kg.ac.rs" title="CPCTAS">CPCTAS team</a>	
                                         <br/>
                                         <a href="http://imi.pmf.kg.ac.rs" target='_blank'>IMI</a> | <a href="http://www.pmf.kg.ac.rs/" target='_blank'>PMF</a> | <a href="http://www.kg.ac.rs/" target='_blank'>University of Kragujevac</a>
                                     </div>

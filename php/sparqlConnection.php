@@ -1,6 +1,7 @@
 <?php
 
 require_once( "sparqllib.php" );
-$sparqlEndPoint = 'http://cpctas-lcmb.pmf.kg.ac.rs:2020/sparql';
+$sparqlEndPoint = "http://localhost:3030/PIBAS/query";
+$sparqlEndPointInsert = "http://localhost:3030/PIBAS/update";
 $db = sparql_connect($sparqlEndPoint);
 

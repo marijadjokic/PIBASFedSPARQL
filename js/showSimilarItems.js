@@ -5,7 +5,7 @@
  */
 var similar_items = document.getElementById('simlar_data').value;
 var myTableDiv = document.getElementById('show_similar_items');
-if (similar_items.trim() =="No similar items!") {
+if (similar_items.trim() === "No similar items!") {
     myTableDiv.innerHTML = "No similar items!";
     myTableDiv.style.display = 'block';
 } else {

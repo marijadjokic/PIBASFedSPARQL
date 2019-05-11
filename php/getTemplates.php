@@ -4,13 +4,7 @@
 require_once("sparqlConnection.php");
 
 $subtopicid = $_POST['subtopic_id'];
-//test value
-//$subtopicid=1;
 
-
-
-
-  
 $templates = "
   PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -18,7 +12,7 @@ $templates = "
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX pibas:<http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#>
   SELECT distinct ?templateName ?templateID
-  FROM <http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSources.owl>
+  #FROM <http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSourcesLocalTest.owl>
   WHERE 
   { 
    

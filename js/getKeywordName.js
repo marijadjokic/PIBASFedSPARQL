@@ -1,6 +1,5 @@
 function getKeywordName() {
     var template_id = document.getElementById('get_templates').value;
-    //alert(template_id);    
 	document.getElementById("for_new_dataset").value="";
 	if (document.getElementById("my_accordion") !== null) {
                     document.getElementById("my_accordion").style.display = "none";

@@ -3,10 +3,6 @@
 require_once("sparqlConnection.php");
 
 $templateid = $_POST['template_id'];
-//test values
-//$templateid=2;
-
-
 
 $get_input_keyword = "  
   PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -15,7 +11,7 @@ $get_input_keyword = "
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX pibas:<http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#>
   SELECT DISTINCT ?input ?topicname
-  FROM <http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSources.owl>
+  #FROM <http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSourcesLocalTest.owl>
   WHERE 
   { 
    

@@ -18,13 +18,12 @@ function FindSimilarItems() {
     var template_id = document.getElementById("get_templates").value;
     var select_value = document.getElementById("get_keywords").value;
 
-    //alert(template_id);
-    //var input_element = document.getElementById("input_elements").innerText;
+
     var cols = document.getElementById('myTable').getElementsByTagName('td');
     var colslen = cols.length;
 
     var subject_uris = [];
-    var dataset_inistiatives = [];
+    var dataset_initiatives = [];
 
     var for_similar = "";
     var new_endpoints = "";
@@ -36,13 +35,13 @@ function FindSimilarItems() {
             subject_uris.push(element);
         } else {
             var name_of_dataset_initiative = cols[i].innerText;
-            dataset_inistiatives.push(name_of_dataset_initiative);
+            dataset_initiatives.push(name_of_dataset_initiative);
 
         }
 
     }
-    if  (dataset_inistiatives.length>1){
-    document.getElementById("name_of_dataset_initiative").value = dataset_inistiatives;
+    if  (dataset_initiatives.length>1){
+    document.getElementById("name_of_dataset_initiative").value = dataset_initiatives;
 
 
     if (document.getElementById("for_similar_endpoints").value !== "") {
@@ -56,18 +55,23 @@ function FindSimilarItems() {
     if (document.getElementById("for_similar_properties").value !== "") {
         var for_similar = document.getElementById("for_similar_properties").value;
     }
-
-
+    
     jQuery("#wait").css("display", "block");
 
     jQuery.ajax({
-
         type: "post",
-        dataType: "",
         url: "php/collectSimilarItems.php",
-        data: {'template_id': template_id, 'select_value':select_value,'subject_uris': subject_uris, 'dataset_inistiatives': dataset_inistiatives, 'new_endpoints': new_endpoints, 'new_initiatives': new_initiatives, 'for_similar': for_similar},
+        data: {
+            'template_id': template_id, 
+            'select_value':select_value,
+            'subject_uris': JSON.stringify(subject_uris), 
+            'dataset_initiatives': JSON.stringify(dataset_initiatives), 
+            'new_endpoints': new_endpoints, 
+            'new_initiatives': new_initiatives, 
+            'for_similar': for_similar
+        },
         success: function (data) {
-            //alert(data);
+            console.log(data);
             jQuery("#wait").css("display", "none");
             
             document.getElementById("myDynamicTable").style.display = "block";
@@ -75,9 +79,8 @@ function FindSimilarItems() {
             document.getElementById("filter_query").style.display = "block";
             document.getElementById("finding_similar_data_items").style.display = "block";
             document.getElementById("add_new_datasets").style.display = "block";
-            //alert(data);
+
             var win = window.open('showSimilarItems.php', '_blank');
-            //win.document.write("<p>This window's name is: " + data + "</p>");
             if (win) {
                 //Browser has allowed it to be opened
                 win.focus();

@@ -124,6 +124,58 @@ class sparql_connection
 
 		return $output;
 	}
+        
+        function update( $query )
+	{	
+		$prefixes = "";
+		foreach( $this->ns as $k=>$v )
+		{
+			$prefixes .= "PREFIX $k: <$v>\n";
+		}
+		$output = $this->dispatchUpdate( $prefixes.$query );
+		if( $this->errno ) { return; }
+		$parser = new xx_xml($output, 'contents');
+		return new sparql_result( $this, $parser->rows, $parser->fields );
+	}
+
+	function dispatchUpdate( $sparql )
+	{
+		$url = $this->endpoint."?update=".urlencode( $sparql );
+		if( $this->debug ) { print "<div class='debug'><a href='".htmlspecialchars($url)."'>".htmlspecialchars($sparql)."</a></div>\n"; }
+		$this->errno = null;
+		$this->error = null;
+		$ch = curl_init($url);
+		#curl_setopt($ch, CURLOPT_HEADER, 1);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_HTTPHEADER,array (
+			"Accept: application/sparql-results+xml"
+		));
+                curl_setopt($ch, CURLOPT_POST, 1);
+
+		$output = curl_exec($ch);      
+		$info = curl_getinfo($ch);
+		if(curl_errno($ch))
+		{
+			$this->errno = curl_errno( $ch );
+			$this->error = 'Curl error: ' . curl_error($ch);
+			return;
+		}
+		if( $output === '' )
+		{
+			$this->errno = "-1";
+			$this->error = 'URL returned no data';
+			return;
+		}
+		if( $info['http_code'] != 200) 
+		{
+			$this->errno = $info['http_code'];
+			$this->error = 'Bad response, '.$info['http_code'].': '.$output;
+			return;
+		}
+		curl_close($ch);
+
+		return $output;
+	}
 
 	####################################
 	# Endpoint Capability Testing

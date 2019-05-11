@@ -5,10 +5,6 @@ $parts = parse_url($_SERVER['REQUEST_URI']);
 parse_str($parts['query'], $query);
 $templateid =$query['template_id'];
 
-//echo $templateid;
-//test value
-//$templateid="2";
-
 require_once("sparqlConnection.php");
 
 
@@ -20,7 +16,7 @@ $dataset_name_and_endpoint = "
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX pibas:<http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#>
   SELECT DISTINCT ?DatasetName ?InitiativeName ?endpoint
-  FROM <http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSources.owl>
+  #FROM <http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSources.owl>
   WHERE 
   { 
    

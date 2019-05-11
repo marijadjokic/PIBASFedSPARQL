@@ -5,10 +5,6 @@ require_once("sparqlConnection.php");
 
 
 $topicid = $_POST['topic_id'];
-//test value
-//$topicid = 2;
-
-
 
 $subtopics = "
   PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -17,7 +13,7 @@ $subtopics = "
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX pibas:<http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#>
   SELECT ?subTopicName ?subtopicid
-  FROM <http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSources.owl>
+  #FROM <http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSourcesLocalTest.owl>
   WHERE 
   { 
     ?topics rdfs:subClassOf pibas:Topics.

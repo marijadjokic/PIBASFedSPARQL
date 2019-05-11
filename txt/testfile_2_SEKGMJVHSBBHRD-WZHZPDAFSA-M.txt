@@ -1,5 +1,0 @@
-2
-http://bio2rdf.org/drugbank:BE0000320,http://bio2rdf.org/drugbank:BE0000734,http://bio2rdf.org/drugbank:BE0000763,http://bio2rdf.org/drugbank:BE0000777,http://bio2rdf.org/drugbank:BE0002175,http://bio2rdf.org/drugbank:BE0002176
-http://drugbank.bio2rdf.org/sparql,http://drugbank.bio2rdf.org/sparql,http://drugbank.bio2rdf.org/sparql,http://drugbank.bio2rdf.org/sparql,http://drugbank.bio2rdf.org/sparql,http://drugbank.bio2rdf.org/sparql
-http://drugbank.bio2rdf.org/sparql=Drugbank/Bio2RDF
-no

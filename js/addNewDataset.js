@@ -6,10 +6,9 @@ function AddNewDataset(topic_name, template_id) {
     var link = document.getElementById("link").value;
     var comment = document.getElementById("comment").value;
     var endpoint = document.getElementById("endpoint").value;
-    //var prefix = document.getElementById("prefix").value;
     var pattern = document.getElementById("pattern").value;
-    var additionalproperties = document.getElementById("additionalproperties").value;
-    if (name === '' || initiative === '' || link === '' || comment === '' || endpoint === '' || pattern === '' || additionalproperties === "") {
+    var public = document.getElementById("public").checked;
+    if (name === '' || initiative === '' || link === '' || comment === '' || endpoint === '' || pattern === '') {
         alert("All fields are required!");
     } else {
 
@@ -18,7 +17,7 @@ function AddNewDataset(topic_name, template_id) {
             type: "post",
             dataType: "json",
             url: "php/getDatasetInformation.php",
-            data: {'template_id': template_id},
+            data: {'template_id': template_id, 'name': name, 'initiative': initiative, 'link': link,'comment': comment, 'endpoint': endpoint, 'pattern': pattern, 'public': public},
             success: function (data) {
 
                 var dataset_names = [];
@@ -40,17 +39,12 @@ function AddNewDataset(topic_name, template_id) {
 
                     var for_initial_query = 'UNION{SERVICE SILENT <' + endpoint + '>{' + pattern + '}BIND("' + name + '/' + initiative + '" AS ?Dataset)}';
                     var number_of_data_for_new_dataset = 'SELECT (count(?' + topic_name + ') as ?Number) WHERE {SERVICE SILENT <' + endpoint + '>{' + pattern + '}}';
-                    //alert(number_of_data_for_new_dataset);
                     document.getElementById("for_new_dataset").value = for_initial_query;
-                    //alert(for_initial_query);
                     var first_link = 'SELECT ?' + topic_name + ' WHERE{SERVICE SILENT <' + endpoint + '>{' + pattern + '}}LIMIT 1';
-                    //alert(first_link);
                     if (first_link.indexOf('%s') > -1) {
                         first_link = first_link.replace('"%s"', '"' + document.getElementById("get_keywords").value + '"');
 
                     }
-
-                    //alert(first_link);
 
                     jQuery.ajax({
 
@@ -61,11 +55,9 @@ function AddNewDataset(topic_name, template_id) {
                         success: function (data) {
                             successmessage = 'Data was succesfully captured';
                             document.getElementById("for_filter_initial_query").value = data.children[0].FirstLink;
-                            //var topicname = document.getElementById("input_elements").innerText;
                             var for_filter = '{"DatasetName": "' + name + '","Initiatives": "' + initiative + '","Endpoint": "' + endpoint + '","Comment": "' + comment + '","Link": "' + link + '","Topicname": "' + topic_name.trim() + '","new":"yes"}';
                             var for_new_filter = [name + '/' + initiative, endpoint, pattern];
 
-                            //alert(for_filter);
                             document.getElementById("for_filter").value = for_filter;
                             document.getElementById("for_new_filter").value = for_new_filter;
                             jQuery.ajax({
@@ -89,9 +81,7 @@ function AddNewDataset(topic_name, template_id) {
                             });
 
                             document.getElementById("for_similar_initiatives").value = name + '/' + initiative;
-                            document.getElementById("for_similar_properties").value = '"' + name + '/' + initiative + '=>' + additionalproperties;
-
-
+                     
                             alert("You successfully added new dataset. Please, try to run query again!");
 
                             var modal = document.getElementById('myModal');
@@ -99,7 +89,6 @@ function AddNewDataset(topic_name, template_id) {
                             document.getElementById('run_all').value = 'Run new query';
                             document.getElementById('run_all').style.backgroundColor = '#3BAB9B';
 
-                            //document.getElementById('run_all').setAttribute("background-color","#3bab9b");
                         },
                         error: function (data) {
                             successmessage = 'Error';

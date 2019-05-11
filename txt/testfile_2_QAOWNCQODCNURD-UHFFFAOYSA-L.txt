@@ -1,5 +1,0 @@
-2
-http://chem2bio2rdf.org/bindingdb/resource/bindingdb_interaction/50140,http://chem2bio2rdf.org/bindingdb/resource/bindingdb_interaction/50141,http://chem2bio2rdf.org/bindingdb/resource/bindingdb_interaction/50142,http://chem2bio2rdf.org/bindingdb/resource/bindingdb_interaction/50143
-http://cheminfov.informatics.indiana.edu:8080/bindingdb/sparql,http://cheminfov.informatics.indiana.edu:8080/bindingdb/sparql,http://cheminfov.informatics.indiana.edu:8080/bindingdb/sparql,http://cheminfov.informatics.indiana.edu:8080/bindingdb/sparql
-http://cheminfov.informatics.indiana.edu:8080/bindingdb/sparql=BindingDB/Chem2Bio2RDF
-no

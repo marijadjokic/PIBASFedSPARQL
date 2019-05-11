@@ -12,7 +12,7 @@ $templates = "
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX pibas:<http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#>
   SELECT DISTINCT ?TopicName
-  FROM <http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSources.owl>
+  FROM <http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSourcesLocalTest.owl>
   WHERE 
   { 
    
@@ -41,7 +41,3 @@ else{
     echo "Currently do not exist topic name!";
 }
 }
-
-    
-   
-#getTopicName("2");

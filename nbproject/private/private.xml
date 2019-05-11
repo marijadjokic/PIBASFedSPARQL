@@ -3,10 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/PIBASFedSPARQLv1/php/getDatasetInformation.php</file>
+            <file>file:/C:/xampp/htdocs/PIBASFedSPARQLv1/php/initialQuries.php</file>
+            <file>file:/C:/xampp/htdocs/PIBASFedSPARQLv1/php/sparqlConnection.php</file>
+            <file>file:/C:/xampp/htdocs/PIBASFedSPARQLv1/php/sparqllib.php</file>
+            <file>file:/C:/xampp/htdocs/PIBASFedSPARQLv1/js/popWindowShow.js</file>
             <file>file:/C:/xampp/htdocs/PIBASFedSPARQLv1/php/collectSimilarItems.php</file>
-            <file>file:/C:/xampp/htdocs/PIBASFedSPARQLv1/js/addNewDataset.js</file>
-            <file>file:/C:/xampp/htdocs/PIBASFedSPARQLv1/js/findSimilarItems.js</file>
             <file>file:/C:/xampp/htdocs/PIBASFedSPARQLv1/py/collectSimilarItem.py</file>
+            <file>file:/C:/xampp/htdocs/PIBASFedSPARQLv1/txt/testfile_2_GHASVSINZRGABV-UHFFFAOYSA-N_test.txt</file>
+            <file>file:/C:/xampp/htdocs/PIBASFedSPARQLv1/txt/testfile_1_C1=CC(=CC(=C1)F)CSC2=NC3=C(N2)C=NC=C3.txt</file>
+            <file>file:/C:/xampp/htdocs/PIBASFedSPARQLv1/txt/testfile_2_GHASVSINZRGABV-UHFFFAOYSA-N.txt</file>
+            <file>file:/C:/xampp/htdocs/PIBASFedSPARQLv1/txt/testfile_2_DHHVAGZRUROJKS-UHFFFAOYSA-N.txt</file>
+            <file>file:/C:/xampp/htdocs/PIBASFedSPARQLv1/txt/testfile_1_CC1(CC1(Cl)Cl)C(=O)NNC(=O)C2CCCCC2.txt</file>
+            <file>file:/C:/xampp/htdocs/PIBASFedSPARQLv1/js/addNewDataset.js</file>
+            <file>file:/C:/xampp/htdocs/PIBASFedSPARQLv1/search.php</file>
         </group>
     </open-files>
 </project-private>

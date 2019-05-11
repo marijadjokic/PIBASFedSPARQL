@@ -1,6 +1,5 @@
 function getTemplates() {
-    var subtopic_id = document.getElementById('get_subtopics').value;
-    //alert(subtopic_id);    
+    var subtopic_id = document.getElementById('get_subtopics').value;  
 	document.getElementById("for_new_dataset").value="";
 	if (document.getElementById("my_accordion") !== null) {
                     document.getElementById("my_accordion").style.display = "none";

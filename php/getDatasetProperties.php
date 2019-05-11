@@ -8,93 +8,72 @@ require_once("sparqlConnection.php");
 $templateID = $_POST["template_id"];
 $dataset_name = $_POST["dataset_name"];
 $dataset_endpoint = $_POST["dataset_endpoint"];
-$dataset_prefix = $_POST["dataset_prefix"];
 $dataset_initiative = $_POST["dataset_initiative"];
 $dataset_topicname = $_POST["topicname"];
 $query_for_new_predicates = $_POST['query_for_new_predicates'];
-
-
-//test values 1
-//$templateID = 1;
-//$dataset_name = "Chembl";
-//$dataset_endpoint = "https://www.ebi.ac.uk/rdf/services/chembl/sparql";
-//$dataset_initiative = "EMBL-EBI";
-//$dataset_prefix = "chembl:<http://rdf.ebi.ac.uk/terms/chembl#>";
-//$dataset_topicname = "Assay";
-//$query_for_new_predicates = "http://chem2bio2rdf.org/bindingdb/resource/bindingdb_interaction/55299";
-//$query_for_new_predicates = "";
-
-////$templateID = 2;
-//$dataset_name = "TestDataset";
-//$dataset_endpoint = "http://cpctas-lcmb.pmf.kg.ac.rs:2020/sparql";
-//$dataset_initiative = "TestInitiative";
-//$dataset_prefix = "drugbank:<http://bio2rdf.org/drugbank_vocabulary:>";
-//$dataset_topicname = "Target";
-//$query_for_new_predicates="http://147.91.205.66:2020/Tests/TestOntology#TestTarget1";
-
-
-
+$dataset_instances = json_decode($_POST['dataset_instances']);
+$query_for_new_predicates = "";
 
 if ($query_for_new_predicates == "") {
-
-    $explode_prefix = explode(":", $dataset_prefix);
-
-
-    $predicate_description = "
-        PREFIX pibas:<http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#>
-        PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
-        PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        PREFIX owl:<http://www.w3.org/2002/07/owl#>
-
-        select ?getPredicateQuery
-        FROM <http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSources.owl>
-        WHERE { 
-        ?template pibas:id $templateID;
-                  pibas:" . strtolower($dataset_name) . "" . strtolower($dataset_initiative) . "" . $dataset_topicname . "getPredicate ?getPredicateQuery.
-         }";
-
-       #echo $predicate_description;
-
-
-    $result1 = $db->query($predicate_description);
-    if (!$result1) {
-        echo "Error: " . $db->errno();
-        exit;
+    $i = 0;
+    $json = '{"Type": "' . $dataset_name . '", "children": [';
+    $list_of_predicates=array();
+    $dataset_instances_new=$dataset_instances;
+    $union_predicate="{";
+    for ($x = 0; $x < count($dataset_instances_new); $x++) {
+         if($x<=35){
+         $union_predicate.=" <".$dataset_instances_new[$x]."> ?predicate ?object.
+               OPTIONAL{ ?predicate rdfs:label ?description.}} UNION{ ?subject ?predicate <".$dataset_instances_new[$x]."> .OPTIONAL{?predicate rdfs:label ?description.}} UNION{";
+   
+         }
     }
+    $union_predicate_new=substr($union_predicate,0,-6);
+        if($dataset_name=="PIBAS"){
+            $predicate_description = "
+            PREFIX pibas:<http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#>
+            PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+            PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX owl:<http://www.w3.org/2002/07/owl#>
+            PREFIX dc: <http://purl.org/dc/terms/>
 
-    $row = $result1->fetch_array();
-
-    $get_predictates = $row['getPredicateQuery'];
-    #echo htmlspecialchars($get_predictates);
-    $result2 = $db->query($get_predictates);
-    if (!$result2) {
-        echo "Error: " . $db->errno();
-        exit;
-    } 
-        //$returnValue = "<table>";
-
-        $i = 0;
-        $json = '{"Type": "' . $explode_prefix[0] . '", "children": [';
-
-        while ($row = $result2->fetch_array()) {
-            $i++;
-            if ($i > 1)
-                $json .= ',';
-            $json .= '{"Data": "' . $explode_prefix[0] . '"';
-            if (!empty($row['description'])) {
-                $json = $json . ', "Predicate": "' . $row['predicate'] . '","Description": "' . $row['description'] . '"}';
-            } else {
-                $json = $json . ', "Predicate": "' . $row['predicate'] . '","Description": "' . $row['predicate'] . '"}';
-            }
+            SELECT DISTINCT ?predicate ?description
+            WHERE {".$union_predicate_new."}";
         }
-        $json .= ']}';
+        else{
+          $predicate_description = "
+            PREFIX pibas:<http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#>
+            PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+            PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX owl:<http://www.w3.org/2002/07/owl#>
+            PREFIX dc: <http://purl.org/dc/terms/>
 
-        echo $json;
+            SELECT DISTINCT ?predicate ?description
+            WHERE { 
+            SERVICE SILENT<$dataset_endpoint>{".$union_predicate_new."}}";
+        }
+        $result = $db->query($predicate_description);
+        while ($row = $result->fetch_array()) {
+            if (!empty($row['predicate']) and (!in_array($row['predicate'],$list_of_predicates))){
+            $json .= '{"Data": "' . $dataset_name. '",';
+            if (!empty($row['description'])) {
+                $json = $json . ' "Predicate": "' . $row['predicate'] . '","Description": "' . $row['description'] . '"},';
+            } else {
+                $json = $json . ' "Predicate": "' . $row['predicate'] . '","Description": "' . $row['predicate'] . '"},';
+            }
+            array_push($list_of_predicates,$row['predicate']);
+        }
+        
+           
+        }
+        
+    
+    $final_predicates = substr($json, 0, -1);
+    
+    echo $final_predicates.']}';
     
 } else {
-
-    // $explode_prefix = explode(":", $dataset_prefix);
     $get_predictates = "
                  PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
                  SELECT DISTINCT ?predicate
@@ -105,14 +84,11 @@ OPTIONAL{?predicate rdfs:label ?label.
 }}
 }";
 
-//echo htmlspecialchars($get_predictates);
     $result2 = $db->query($get_predictates);
     if (!$result2) {
         echo("<b>Endpoint problem! Please try leter!</b> \n\n");
         exit;
     } else {
-        //$returnValue = "<table>";
-
         $i = 0;
         $json = '{"Type": "' . $dataset_name . '", "children": [';
 
@@ -120,8 +96,6 @@ OPTIONAL{?predicate rdfs:label ?label.
             $i++;
             if ($i > 1)
                 $json .= ',';
-
-
 
 
             if (!empty($row['predicate'])) {

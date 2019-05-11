@@ -25,14 +25,12 @@ function RunAll() {
 
         if (document.getElementById("for_new_dataset") !== null) {
             var for_new_datasetes = document.getElementById("for_new_dataset").value;
-            //var new_prefix = document.getElementById("new_prefix").value;
 
         } else {
 
             var for_new_datasetes = "";
-            //var new_prefix = "";
+
         }
-        //                          alert(template_id+' '+select_value+' '+for_new_datasetes);
 
         jQuery.ajax({
 
@@ -49,7 +47,8 @@ function RunAll() {
                 table += '<thead><tr>';
                 table += '<th id="input_elements" class="table-sort">' + data.Variable1 + '</th>';
                 table += '<th class="table-sort">' + data.Variable2 + '</th>';
-
+                var dataset_instances={};
+                
                 table += '</tr></thead>';
                 table += '<tbody>';
                 function isUrl(s) {
@@ -74,7 +73,19 @@ function RunAll() {
                         statistics_data[data.children[x].Dataset] += 1;
                     else
                         statistics_data[data.children[x].Dataset] = 1;
-                }
+                    
+                    
+                    if (dataset_instances.hasOwnProperty(data.children[x].Dataset)){
+                        dataset_instances[data.children[x].Dataset].push(data.children[x][data.Variable1]);
+                    }
+                    else{
+                        dataset_instances[data.children[x].Dataset]=[data.children[x][data.Variable1]];
+                    }
+                    
+       
+                    
+                 }
+                 document.getElementById("dataset_instances").value=JSON.stringify(dataset_instances);
 
                 table += '</tbody></table>';
                 myTableDiv.innerHTML = table;
@@ -91,7 +102,6 @@ function RunAll() {
                     data: {'template_id': template_id},
                     success: function (data) {
                         var show_similar = data.children[0].hasSimilarItem;
-                        //alert(show_similar);
                         if (show_similar === "yes") {
                             document.getElementById("finding_similar_data_items").style.display = 'block';
                         } else {
@@ -109,11 +119,7 @@ function RunAll() {
                     document.getElementById("accordion").style.display = 'none';
                 }
                 document.getElementById('run_all').value = 'Run query';
-                document.getElementById('run_all').style.backgroundColor = 'white';
-//                for(var key in statistics_data) {
-//                var value = statistics_data[key];
-//                alert(key+" : "+value);
-//                }
+                document.getElementById('run_all').style.backgroundColor = 'white';                
 
             },
             error: function (data) {

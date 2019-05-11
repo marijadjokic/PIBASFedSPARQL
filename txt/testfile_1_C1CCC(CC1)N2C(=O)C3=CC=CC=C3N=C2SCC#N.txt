@@ -1,5 +1,0 @@
-1
-http://chem2bio2rdf.org/pubchem/resource/pubchem_bioassay/940,http://chem2bio2rdf.org/pubchem/resource/pubchem_bioassay/1040,http://chem2bio2rdf.org/pubchem/resource/pubchem_bioassay/1080
-http://147.91.203.161:8890/sparql,http://147.91.203.161:8890/sparql,http://147.91.203.161:8890/sparql
-http://147.91.203.161:8890/sparql=Pubchem/Chem2Bio2RDF
-no

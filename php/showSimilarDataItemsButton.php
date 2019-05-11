@@ -4,8 +4,6 @@ require_once("sparqlConnection.php");
 
 
 $templateid = $_POST['template_id'];
-//test value
-//$templateid = "4";
 
 $dataset_name_and_endpoint = "  
   PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -14,7 +12,7 @@ $dataset_name_and_endpoint = "
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX pibas:<http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS#>
   SELECT DISTINCT ?hasSimilarItem
-  FROM <http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSources.owl>
+  #FROM <http://cpctas-lcmb.pmf.kg.ac.rs/2012/3/PIBAS/DataSourcesLocalTest.owl>
   WHERE 
   { 
    
@@ -44,4 +42,3 @@ if (sparql_num_rows($result) > 0) {
 } else {
     echo "Currently do not exist information about this template!";
 }
-?>

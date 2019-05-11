@@ -1,7 +1,6 @@
 function getSubTopic()
 {
     var topic_id = document.getElementById('topic').value;
-    //alert(topic_id);
 	document.getElementById("for_new_dataset").value="";
 	document.getElementById("my_accordion").style.display = "none";
     if (topic_id !== "0") {

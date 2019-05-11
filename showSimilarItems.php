@@ -57,7 +57,7 @@ session_start();
                 <!-- content ends -->
                 <!-- footer begins -->
                 <div id="footer">
-                    Copyright  2016. Designed by <a href="http://cpctas-lcmb.pmf.kg.ac.rs" title="CPCTAS">CPCTAS team</a>	
+                    Copyright  2019. Designed by <a href="http://cpctas-lcmb.pmf.kg.ac.rs" title="CPCTAS">CPCTAS team</a>	
                     <br/>
                     <a href="imi.pmf.kg.ac.rs" target='_blank'>IMI</a> | <a href="http://www.pmf.kg.ac.rs/" target='_blank'>PMF</a> | <a href="http://www.kg.ac.rs/" target='_blank'>University of Kragujevac</a>
                 </div>
