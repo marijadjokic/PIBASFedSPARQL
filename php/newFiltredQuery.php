@@ -159,7 +159,7 @@ foreach ($predicates_arange as $key => $value) {
                     foreach ($fields as $field) {
 
                         if (!empty($row[$field]) && $row[$field] != "") {
-                            $json = $json . ' "' . $field . '": "' . $row[$field] . '",';
+                            $json = $json . ' "' . $field . '": "' . str_replace('"', "'",$row[$field]) . '",';
 
                         } else {
                             $json = $json . ' "' . $field . '": "N/A",';
@@ -213,7 +213,7 @@ foreach ($predicates_arange as $key => $value) {
                     $json .= '{';
                     foreach ($fields as $field) {
                         if (!empty($row[$field]) && $row[$field] != "") {
-                            $json = $json . ' "' . $field . '": "' . $row[$field] . '",';
+                            $json = $json . ' "' . $field . '": "' . str_replace('"', "'",$row[$field]) . '",';
                         } else {
                             $json = $json . ' "' . $field . '": "N/A",';
                         }
