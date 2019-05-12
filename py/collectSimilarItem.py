@@ -26,7 +26,7 @@ stop_words = get_stop_words('english')
 splitter = re.compile("[a-z0-9]+", re.I)
 stemmer = porter.PorterStemmer()
 
-
+my_file=sys.argv[1]
 fp = open(my_file, "r")
 
 lines = [line.rstrip('\n') for line in fp]
